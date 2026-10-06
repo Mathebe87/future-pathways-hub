@@ -5,14 +5,9 @@
 //     error logger plugins, and sandbox detection (port/host/strictPort).
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
-<<<<<<< HEAD
-
-export default defineConfig({
-=======
 import { loadEnv, type ConfigEnv } from "vite";
 
 const appConfig = defineConfig({
->>>>>>> ef103b6 (Initial AI bot update)
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
@@ -38,8 +33,6 @@ const appConfig = defineConfig({
     },
   },
 });
-<<<<<<< HEAD
-=======
 
 export default async (configEnv: ConfigEnv) => {
   const env = loadEnv(configEnv.mode, process.cwd(), "");
@@ -49,4 +42,3 @@ export default async (configEnv: ConfigEnv) => {
 
   return appConfig(configEnv);
 };
->>>>>>> ef103b6 (Initial AI bot update)

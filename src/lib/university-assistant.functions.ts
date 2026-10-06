@@ -6,10 +6,16 @@ import { getServerConfig } from "./config.server";
 const chatMessagesSchema = z.object({
   messages: z
     .array(
-      z.object({
-        role: z.enum(["user", "assistant"]),
-        content: z.string().trim().min(1).max(2000),
-      }),
+      z.discriminatedUnion("role", [
+        z.object({
+          role: z.literal("user"),
+          content: z.string().trim().min(1).max(2000),
+        }),
+        z.object({
+          role: z.literal("assistant"),
+          content: z.string().trim().min(1).max(10000),
+        }),
+      ]),
     )
     .min(1)
     .max(12),
