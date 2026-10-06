@@ -57,6 +57,10 @@ Install dependencies:
 npm install
 
 Create a `.env` file using `.env.example` and provide the required environment variables.
+<<<<<<< HEAD
+=======
+For the South African university assistant, set `GROQ_API_KEY` to a fresh Groq API key in `.env` (or in your hosting provider's server-side environment settings). Do not use a `VITE_` prefix: the key must remain server-side.
+>>>>>>> ef103b6 (Initial AI bot update)
 
 Start the development server:
 

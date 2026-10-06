@@ -12,6 +12,10 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AuthProvider } from "../lib/auth";
+<<<<<<< HEAD
+=======
+import { UniversityAssistant } from "../components/UniversityAssistant";
+>>>>>>> ef103b6 (Initial AI bot update)
 
 function NotFoundComponent() {
   return (
@@ -79,9 +83,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Varsity Hub · Your Future. All in One Place." },
+<<<<<<< HEAD
       { name: "description", content: "Discover programs, check eligibility, get career guidance and apply to South African universities. All in one place." },
       { property: "og:title", content: "Varsity Hub · That's Tech For You" },
       { property: "og:description", content: "Discover programs, check eligibility, get career guidance and apply to South African universities." },
+=======
+      {
+        name: "description",
+        content:
+          "Discover programs, check eligibility, get career guidance and apply to South African universities. All in one place.",
+      },
+      { property: "og:title", content: "Varsity Hub · That's Tech For You" },
+      {
+        property: "og:description",
+        content:
+          "Discover programs, check eligibility, get career guidance and apply to South African universities.",
+      },
+>>>>>>> ef103b6 (Initial AI bot update)
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -92,7 +110,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+<<<<<<< HEAD
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" },
+=======
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap",
+      },
+>>>>>>> ef103b6 (Initial AI bot update)
     ],
   }),
   shellComponent: RootShell,
@@ -123,6 +148,10 @@ function RootComponent() {
       <AuthProvider>
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <Outlet />
+<<<<<<< HEAD
+=======
+        <UniversityAssistant />
+>>>>>>> ef103b6 (Initial AI bot update)
       </AuthProvider>
     </QueryClientProvider>
   );

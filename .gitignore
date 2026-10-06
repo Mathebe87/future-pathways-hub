@@ -15,6 +15,12 @@ dist-ssr
 .tanstack/**
 .nitro
 *.local
+<<<<<<< HEAD
+=======
+.env
+.env.*
+!.env.example
+>>>>>>> ef103b6 (Initial AI bot update)
 
 # Wrangler / Cloudflare
 .wrangler/
